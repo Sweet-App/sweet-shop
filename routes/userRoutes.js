@@ -69,7 +69,6 @@ router
   .patch(
     authMiddlewers.protect,
     authMiddlewers.restrictTo("admin"),
-    imguserMiddlewers.uploadUserPhoto,
     dynamicMiddleware.setPathImginBody("users", "photo"),
     userController.updateUser
   )

@@ -51,7 +51,6 @@ router
   .patch(
     authMiddlewers.protect,
     authMiddlewers.restrictTo("user"),
-    imgExtentionMiddlewers.uploadUserPhoto,
     dynamicMiddleware.filteredBody("photo"),
     dynamicMiddleware.setPathImginBody("extensions", "photo"),
     extesionController.updateextesion
