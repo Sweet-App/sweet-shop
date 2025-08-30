@@ -19,13 +19,13 @@ const swaggerSpec=require('./swagger/swagger');
 const bodyParser = require('body-parser');
 //2
 // Start express app
-const app = express();
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*"); // Or specify a domain instead of *
-  res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
-  next();
-});
+// const app = express();
+// app.use((req, res, next) => {
+//   res.header("Access-Control-Allow-Origin", "*"); // Or specify a domain instead of *
+//   res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+//   res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+//   next();
+// });
 
 
 // Implement CORS
@@ -118,35 +118,36 @@ app.all("*", (req, res, next) => {
 });
 app.use(errorGlobal);
 
-process.on("uncaughtException", (err) => {
-  console.log("UNCAUGHT EXCEPTION! 💥 Shutting down...");
-  console.log(err.name, err.message);
-  process.exit(1);
-});
+// process.on("uncaughtException", (err) => {
+//   console.log("UNCAUGHT EXCEPTION! 💥 Shutting down...");
+//   console.log(err.name, err.message);
+//   process.exit(1);
+// });
 //4)
-mongoose
-  .connect(process.env.DATABASE_URL)
-  .then((result) => {
-    app.listen(process.env.PORT, () => {
-      console.log(
-        `Example app listening at http://localhost:${process.env.PORT}/docs`
-      );
-    });
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+// mongoose
+//   .connect(process.env.DATABASE_URL)
+//   .then((result) => {
+//     app.listen(process.env.PORT, () => {
+//       console.log(
+//         `Example app listening at http://localhost:${process.env.PORT}/docs`
+//       );
+//     });
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
 
-process.on("unhandledRejection", (err) => {
-  console.log("UNHANDLED REJECTION! 💥 Shutting down...");
-  console.log(err.name, err.message);
-  server.close(() => {
-    process.exit(1);
-  });
-});
-process.on("SIGTERM", () => {
-  console.log("👋 SIGTERM RECEIVED. Shutting down gracefully");
-  server.close(() => {
-    console.log("💥 Process terminated!");
-  });
-});
+// process.on("unhandledRejection", (err) => {
+//   console.log("UNHANDLED REJECTION! 💥 Shutting down...");
+//   console.log(err.name, err.message);
+//   server.close(() => {
+//     process.exit(1);
+//   });
+// });
+// process.on("SIGTERM", () => {
+//   console.log("👋 SIGTERM RECEIVED. Shutting down gracefully");
+//   server.close(() => {
+//     console.log("💥 Process terminated!");
+//   });
+// });
+module.exports=app;
