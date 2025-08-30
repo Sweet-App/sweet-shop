@@ -1,9 +1,9 @@
-const Location = require('../models/LocationModel');
+const location = require('../models/LocationModel');
 const factory = require("../utils/handlerFactory");
 const catchAsync = require("../utils/catchAsync");
-exports.getAllLocation = factory.getAll(Location);
-exports.getLocation = factory.getOne(Location);
-exports.updateLocation = factory.updateOne(Location);
-exports.createLocation = factory.createOne(Location);
-exports.deleteLocation = factory.deleteOne(Location);
-exports.getAllRegion = factory.getField(Location, "region");
+exports.getAllLocation = factory.getAll(location);
+exports.getLocation = factory.getOne(location);
+exports.updateLocation = factory.updateOne(location);
+exports.createLocation = factory.createOne(location);
+exports.deleteLocation = factory.deleteOne(location);
+exports.getAllRegion = factory.getField(location, "region");
