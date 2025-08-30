@@ -1,5 +1,6 @@
 //1)
 const express = require("express");
+const app = express();
 const cloudinary = require("./config/cloudinary");
 const morgan = require("morgan");
 const rateLimit = require("express-rate-limit");
@@ -19,7 +20,7 @@ const swaggerSpec=require('./swagger/swagger');
 const bodyParser = require('body-parser');
 //2
 // Start express app
-const app = express();
+
 // app.use((req, res, next) => {
 //   res.header("Access-Control-Allow-Origin", "*"); // Or specify a domain instead of *
 //   res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
