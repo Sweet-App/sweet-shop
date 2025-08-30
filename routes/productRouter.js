@@ -4,7 +4,6 @@ const express = require("express");
 const router = express.Router();
 const authMiddlewers = require("../middlewares/authMiddlewers");
 const dynamicMiddleware = require("../middlewares/dynamicMiddleware");
-const imgproductMiddlewers = require("../middlewares/imgprodectMiddlewar");
 const productController = require("../controllers/productController");
 router
   .route("/categurie")

@@ -4,7 +4,6 @@ const express = require('express');
 const userController = require('./../controllers/userController');
 const authController = require('./../controllers/authController');
 const authMiddlewers = require('./../middlewares/authMiddlewers');
-const imguserMiddlewers = require('../middlewares/imguserMiddlewers');
 const dynamicMiddleware = require('./../middlewares/dynamicMiddleware');
 
 const router = express.Router();

@@ -2,7 +2,7 @@ const uploadToCloudinaryForUpdate=require("../middlewares/updates")
 const { upload, uploadToCloudinary } = require("../middlewares/cloudyextesionMiddleware");
 const extesionController = require("../controllers/extesionController");
 const authMiddlewers = require("../middlewares/authMiddlewers");
-const imgExtentionMiddlewers = require("../middlewares/imgExtentionMiddlewers");
+
 const dynamicMiddleware = require("../middlewares/dynamicMiddleware");
 const express = require("express");
 const router = express.Router({ mergeParams: true });

@@ -4,7 +4,7 @@ const uploadToCloudinaryForUpdate=require("../middlewares/updates");
 const categurieController = require("../controllers/categurieController");
 const authMiddlewers = require('../middlewares/authMiddlewers');
 const dynamicMiddleware = require("../middlewares/dynamicMiddleware");
-const imgcategurieMiddlewers = require("../middlewares/imgcategurieMiddlewers");
+
 const express = require('express');
 const router = express.Router();
 router.get('/search', categurieController.searchCatrgurie);
