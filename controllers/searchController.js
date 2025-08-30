@@ -1,6 +1,6 @@
 // controllers/searchController.js
-const Product = require('../models/ProductModel');
-const Location = require('../models/LocationModel');
+const Product = require('../models/productModel');
+const Location = require('../models/locationModel');
 const Order = require('../models/orderModel');
 const Category = require('../models/categurieModel');
 const User = require('../models/userModel');
